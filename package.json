@@ -1,0 +1,11 @@
+{
+  "name": "capstone-workspace",
+  "version": "1.0.0",
+  "description": "Artisan Marketplace Stack - Single Port",
+  "main": "index.js",
+  "scripts": {
+    "seed": "node backend/seeder.js",
+    "build-frontend": "npm run build --prefix frontend",
+    "start": "npm run build-frontend && node backend/server.js"
+  }
+}

@@ -84,8 +84,8 @@ const CartPage = ({ products, onNavigate }) => {
       <div className="space-y-3">
         {fullCartItems.map(item => (
           <div key={item._id} className="flex items-center gap-3 bg-white p-3 rounded-xl border border-gray-100 shadow-sm">
-            <img src={item.imageUrl} alt={item.name} className="w-16 h-16 object-cover rounded-lg flex-shrink-0" />
-            <div className="flex-grow min-w-0">
+            <img src={item.imageUrl} alt={item.name} className="w-16 h-16 object-cover rounded-lg shrink-0" />
+            <div className="grow min-w-0">
               <h4 className="text-sm font-bold text-gray-900 truncate">{item.name}</h4>
               <p className="text-xs font-black text-emerald-800 mt-0.5">₦{item.price.toLocaleString()}</p>
               <div className="flex items-center gap-2 mt-2">

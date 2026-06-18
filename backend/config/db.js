@@ -1,9 +1,13 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
+const dns = require("node:dns");
+
+// Force Node.js to use Google DNS internally to bypass local network protocol restrictions
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
 
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.MONGO_URI);
-    console.log(`MongoDB Connected: ${conn.connection.host}`);
+    console.log(`✅ MongoDB Connected Successfully: ${conn.connection.host}`);
   } catch (error) {
     console.error(`Database Connection Error: ${error.message}`);
     process.exit(1);
